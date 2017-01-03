@@ -28,6 +28,21 @@ var albumMarconi = {
      ]
  };
 
+var albumAdele = {
+     title: '25',
+     artist: 'Adele',
+     label: 'XL Recordings',
+     year: '2015',
+     albumArtUrl: 'assets/images/album_covers/20.png',
+     songs: [
+         { title: 'Hello', duration: '1:01' },
+         { title: 'Remedy', duration: '5:01' },
+         { title: 'Send my Love', duration: '3:21'},
+         { title: 'When We Were Young', duration: '3:14' },
+         { title: 'All I ask', duration: '2:15'}
+     ]
+ };
+
 var createSongRow = function(songNumber, songName, songLength) {
      var template =
         '<tr class="album-view-song-item">'
@@ -39,6 +54,12 @@ var createSongRow = function(songNumber, songName, songLength) {
  
      return template;
  };
+
+function toArray(list) {
+    return Array.prototype.slice.call(list);
+}
+
+
 
 var setCurrentAlbum = function(album) {
      // #1
@@ -67,3 +88,13 @@ var setCurrentAlbum = function(album) {
      setCurrentAlbum(albumPicasso);
  };
 
+var albums = [albumPicasso, albumMarconi, albumAdele];
+var index = 1;
+albumImage.addEventListerner("click", function(event){
+    setCurrentAlbum(albums[index]);
+    index++;
+    if (index ++ albums.length) {
+        index = 0;
+    }
+});
+};
