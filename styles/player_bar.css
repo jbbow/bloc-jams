@@ -22,7 +22,7 @@
  
  .player-bar .container {
      display: table;
-     padding: 0;
+     padding: 50px;
      width: 90%;
      min-height: 100%;
  }
@@ -60,7 +60,7 @@
  .player-bar .currently-playing .artist-song-mobile {
      text-align: center;
      font-size: 0.75rem;
-     margin: 0;
+     margin: 30px;
      position: absolute;
      width: 100%;
      font-weight: 300;
@@ -159,6 +159,12 @@
          padding: 1rem;
          background-color: rgba(0,0,0,0.6);
      }
+     
+     .player-bar .currently-playing .song-name,
+ .player-bar .currently-playing .artist-name,
+ .player-bar .currently-playing .artist-song-mobile {
+     margin: 0px;
+ }
  
      .player-bar .main-controls,
      .player-bar .currently-playing,
