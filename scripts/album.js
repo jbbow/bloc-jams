@@ -140,11 +140,17 @@ var updatePlayerBarSong = function() {
 
  var $previousButton = $('.main-controls .previous');
  var $nextButton = $('.main-controls .next');
- 
+ var $mainPlay = $('.main-controls .play-pause');
+
+var togglePlayFromPlayerBar = function(){
+     
+}
+
  $(document).ready(function() {
      setCurrentAlbum(albumPicasso);
-          $previousButton.click(previousSong);
+     $previousButton.click(previousSong);
      $nextButton.click(nextSong);
+     $mainPlay.click(togglePlayFromPlayerBar);
      
  });
 
